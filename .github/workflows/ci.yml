@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Import / start check (smoke)
+        run: python -c "from app.main import app; print('app imports OK')"
+      - name: Run tests (app start + MCP discovery/tool calls + ingestion)
+        run: pytest -q
+
+  deploy:
+    # Deployment only happens if every test passed (rubric §8)
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render deploy hook
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$RENDER_DEPLOY_HOOK" ]; then
+            curl -fsS -X POST "$RENDER_DEPLOY_HOOK" && echo "deploy triggered"
+          else
+            echo "RENDER_DEPLOY_HOOK secret not set - skipping deploy (tests still gate)"
+          fi

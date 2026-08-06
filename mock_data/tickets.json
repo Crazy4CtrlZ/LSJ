@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "description": "Synthetic HR ticket/case store for LSJ, Inc. — fictional data for an academic project. The create_mock_hr_ticket MCP tool appends to this structure IN MEMORY at runtime; the committed file is never mutated (action-safety requirement).",
+    "as_of": "2026-08-04",
+    "next_ticket_id": "TCK-1004",
+    "categories": ["Time Off", "Leave — Extended", "Benefits", "Payroll", "Workplace", "Conduct — Sensitive", "Other"],
+    "category_source": "POL-015 §3",
+    "priorities": ["P1", "P2", "P3"],
+    "statuses": ["open", "pending_employee", "pending_approver", "resolved", "closed"]
+  },
+  "tickets": [
+    {
+      "ticket_id": "TCK-1001",
+      "employee_id": "EMP005",
+      "category": "Payroll",
+      "priority": "P2",
+      "status": "closed",
+      "summary": "Incorrect commuter benefit deduction on 2026-06-15 pay statement.",
+      "resolution": "Deduction corrected; off-cycle adjustment paid 2026-06-19 per POL-014 §8.",
+      "created_at": "2026-06-16T09:12:00Z",
+      "updated_at": "2026-06-19T15:40:00Z",
+      "mock": true
+    },
+    {
+      "ticket_id": "TCK-1002",
+      "employee_id": "EMP008",
+      "category": "Workplace",
+      "priority": "P3",
+      "status": "resolved",
+      "summary": "Request for annual virtual ergonomic assessment (POL-016 §4).",
+      "resolution": "Assessment scheduled and completed 2026-07-10; monitor riser recommended.",
+      "created_at": "2026-06-30T13:05:00Z",
+      "updated_at": "2026-07-10T17:22:00Z",
+      "mock": true
+    },
+    {
+      "ticket_id": "TCK-1003",
+      "employee_id": "EMP007",
+      "category": "Workplace",
+      "priority": "P3",
+      "status": "closed",
+      "summary": "International Remote Work Request — 5 business days from Lisbon, Portugal (2026-03-09 to 2026-03-13).",
+      "resolution": "Approved by manager EMP006 and People Operations per POL-002 §5.2; security conditions per POL-007 §6 acknowledged; days recorded against rolling 12-month allowance.",
+      "created_at": "2026-02-12T10:30:00Z",
+      "updated_at": "2026-02-18T11:02:00Z",
+      "mock": true
+    }
+  ]
+}

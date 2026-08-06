@@ -1,0 +1,71 @@
+WORKPLACE ACCOMMODATIONS AND SAFETY POLICY — LSJ, INC.
+Doc ID: POL-016 | Category: Workplace | Version 2.2 | Last updated: 2026-04-25
+Owner: People Operations & Workplace Operations
+
+1. PURPOSE AND SCOPE
+
+This policy covers reasonable accommodations for disabilities and religious practice, ergonomics, workplace safety, and incident reporting for LSJ offices and remote workspaces. It applies to all employees and, for safety provisions, to anyone on company premises.
+
+2. COMMITMENT
+
+The Company provides reasonable accommodations to qualified individuals with disabilities and for sincerely held religious beliefs, unless doing so would create undue hardship. Requesting an accommodation is protected activity; retaliation violates the Code of Conduct (POL-005, Section 3.2).
+
+3. REQUESTING AN ACCOMMODATION
+
+3.1 Process
+
+1. File an HR case under category "Workplace" (POL-015, Section 3), or speak with any People Operations partner.
+2. People Operations initiates an interactive process within 5 business days: understanding limitations, exploring options, and consulting the manager only as needed.
+3. Medical documentation may be requested; it is stored separately from personnel files and classified Confidential (POL-007, Section 3).
+4. A written determination is issued, typically within 15 business days of complete information.
+
+3.2 Examples
+
+Modified schedules (coordinated with POL-011 core-hours rules), remote-work modifications beyond standard POL-002 arrangements, assistive technology, ergonomic equipment beyond standard issue, accessible workspace changes, and leave as an accommodation (coordinated with POL-012).
+
+3.3 Interim measures
+
+Where the interactive process will take time, People Operations may approve temporary measures so the employee can keep working safely.
+
+4. ERGONOMICS
+
+Office workstations are height-adjustable; sit-stand desks are standard at all offices. Employees may request a professional ergonomic assessment (virtual for remote employees) once per year through a "Workplace" HR case. Home-office ergonomic purchases use the stipend in POL-003, Section 7; assessments may support accommodation-based equipment beyond stipend caps under Section 3 of this policy.
+
+5. LACTATION SUPPORT
+
+All offices provide dedicated lactation rooms with refrigeration. Nursing employees receive paid break time as needed (POL-011, Section 7) and may book rooms through the workplace portal. Remote employees may shift core-hours availability with manager awareness.
+
+6. WORKPLACE SAFETY
+
+6.1 General
+
+The Company maintains safe facilities: badge access, first-aid stations, fire drills twice yearly, and trained floor wardens. Employees must follow posted safety procedures and complete the annual safety briefing.
+
+6.2 Incident reporting
+
+Work-related injuries, near misses, and unsafe conditions must be reported to Workplace Operations within 24 hours via the workplace portal. Injuries requiring medical attention are additionally reported to People Operations the same day for insurance purposes. Security incidents follow POL-007, Section 9; violence or threats follow POL-005, Section 5.
+
+6.3 Remote workspace safety
+
+Employees are responsible for maintaining a safe home workspace (POL-006, Section 8). Work-related injuries during scheduled remote work hours should be reported under Section 6.2 as if they occurred on premises.
+
+7. VISITORS AND EVENTS
+
+Visitors must be registered, badged, and escorted in non-public areas. Company events follow the conduct standards of POL-005 (including Section 6 on alcohol) and the safety provisions of this policy.
+
+8. EMERGENCY PREPAREDNESS
+
+Each office publishes evacuation routes and assembly points in the workplace portal. The Company uses an emergency notification system; keeping a current mobile number in the HR portal is required for all employees.
+
+9. RELATED DOCUMENTS
+
+- Code of Conduct (POL-005)
+- Working Hours, Overtime, and Timekeeping (POL-011)
+- Extended Leave of Absence Policy (POL-012)
+- HR Case and Escalation Procedures (POL-015)
+- Expense and Reimbursement Policy (POL-003)
+- Data Security Policy (POL-007)
+- Onboarding and Equipment Policy (POL-006)
+
+---
+This document is entirely fictional and was generated for an academic software project. It does not describe a real company or real employees.

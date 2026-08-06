@@ -1,0 +1,163 @@
+{
+  "_meta": {
+    "description": "Synthetic PTO, sick leave, and floating holiday balances for LSJ, Inc. — fictional data for an academic project.",
+    "as_of": "2026-08-04",
+    "accrual_rules": "POL-001 §2.1: 1.25 days/mo (0-2 yrs), 1.67 days/mo (3-5 yrs), 2.08 days/mo (6+ yrs); accrues last day of month; part-time prorated. Accrued YTD reflects 7 completed months (Jan-Jul 2026). Carryover from 2025 expired 2026-03-31 (POL-001 §2.4).",
+    "field_notes": "available_days = accrued_ytd - used_ytd - pending_days. intl_remote_days_used_rolling_12mo counts against the 20-business-day limit in POL-002 §5.1."
+  },
+  "balances": [
+    {
+      "employee_id": "EMP001",
+      "pto_eligible": true,
+      "monthly_accrual_days": 2.08,
+      "accrued_ytd": 14.56,
+      "used_ytd": 9.0,
+      "pending_days": 0.0,
+      "available_days": 5.56,
+      "carryover_expired_2026_03_31": 2.0,
+      "sick_days_remaining": 8,
+      "floating_holidays_remaining": 1,
+      "intl_remote_days_used_rolling_12mo": 0
+    },
+    {
+      "employee_id": "EMP002",
+      "pto_eligible": true,
+      "monthly_accrual_days": 1.67,
+      "accrued_ytd": 11.69,
+      "used_ytd": 4.0,
+      "pending_days": 2.0,
+      "available_days": 5.69,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "intl_remote_days_used_rolling_12mo": 0,
+      "pending_request": {
+        "request_id": "PTO-2026-0187",
+        "dates": "2026-08-24 to 2026-08-25",
+        "days": 2.0,
+        "status": "pending_manager_approval"
+      }
+    },
+    {
+      "employee_id": "EMP003",
+      "pto_eligible": false,
+      "reason": "Contractor — not eligible for PTO accrual or paid leave (POL-001 §8)."
+    },
+    {
+      "employee_id": "EMP004",
+      "pto_eligible": true,
+      "monthly_accrual_days": 1.67,
+      "accrued_ytd": 11.69,
+      "used_ytd": 5.0,
+      "pending_days": 0.0,
+      "available_days": 6.69,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 9,
+      "floating_holidays_remaining": 2,
+      "intl_remote_days_used_rolling_12mo": 0
+    },
+    {
+      "employee_id": "EMP005",
+      "pto_eligible": true,
+      "monthly_accrual_days": 2.08,
+      "accrued_ytd": 14.56,
+      "used_ytd": 10.0,
+      "pending_days": 0.0,
+      "available_days": 4.56,
+      "carryover_expired_2026_03_31": 1.0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 1,
+      "intl_remote_days_used_rolling_12mo": 0
+    },
+    {
+      "employee_id": "EMP006",
+      "pto_eligible": true,
+      "monthly_accrual_days": 2.08,
+      "accrued_ytd": 14.56,
+      "used_ytd": 6.0,
+      "pending_days": 0.0,
+      "available_days": 8.56,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "intl_remote_days_used_rolling_12mo": 3
+    },
+    {
+      "employee_id": "EMP007",
+      "pto_eligible": true,
+      "monthly_accrual_days": 1.67,
+      "accrued_ytd": 11.69,
+      "used_ytd": 8.0,
+      "pending_days": 0.0,
+      "available_days": 3.69,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 7,
+      "floating_holidays_remaining": 1,
+      "intl_remote_days_used_rolling_12mo": 5,
+      "notes": "5 of 20 international remote-work business days used in the rolling 12-month window (POL-002 §5.1) — 15 remaining."
+    },
+    {
+      "employee_id": "EMP008",
+      "pto_eligible": true,
+      "monthly_accrual_days": 1.0,
+      "accrual_note": "Part-time proration: 1.67 x 0.6 FTE (POL-001 §2.1)",
+      "accrued_ytd": 7.0,
+      "used_ytd": 3.0,
+      "pending_days": 0.0,
+      "available_days": 4.0,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 10,
+      "floating_holidays_remaining": 2,
+      "intl_remote_days_used_rolling_12mo": 0
+    },
+    {
+      "employee_id": "EMP009",
+      "pto_eligible": true,
+      "pto_usable": false,
+      "pto_usable_from": "2026-09-14",
+      "usable_note": "In 90-day introductory period (ends 2026-09-13): accrues but cannot use PTO except documented emergencies with manager + People Operations approval (POL-001 §2.3).",
+      "monthly_accrual_days": 1.25,
+      "accrued_ytd": 2.5,
+      "used_ytd": 0.0,
+      "pending_days": 0.0,
+      "available_days": 2.5,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 5,
+      "sick_note": "Prorated for 2026-06-15 hire (POL-001 §4)",
+      "floating_holidays_remaining": 2,
+      "intl_remote_days_used_rolling_12mo": 0
+    },
+    {
+      "employee_id": "EMP010",
+      "pto_eligible": true,
+      "monthly_accrual_days": 2.08,
+      "accrued_ytd": 14.56,
+      "used_ytd": 12.0,
+      "pending_days": 0.0,
+      "available_days": 2.56,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 9,
+      "floating_holidays_remaining": 0,
+      "intl_remote_days_used_rolling_12mo": 0
+    },
+    {
+      "employee_id": "EMP011",
+      "pto_eligible": true,
+      "monthly_accrual_days": 1.25,
+      "accrued_ytd": 8.75,
+      "used_ytd": 6.75,
+      "pending_days": 0.0,
+      "available_days": 2.0,
+      "carryover_expired_2026_03_31": 0.0,
+      "sick_days_remaining": 6,
+      "floating_holidays_remaining": 1,
+      "intl_remote_days_used_rolling_12mo": 0,
+      "notes": "Low balance (2.0 days): a 3+ day request would fail the balance check in POL-001 §3.3 — insufficient-balance demo path (options: shorter request, unpaid personal leave per POL-001 §7)."
+    },
+    {
+      "employee_id": "EMP012",
+      "pto_eligible": false,
+      "reason": "Intern — unpaid time off by arrangement with manager (POL-001 §8)."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+EXTENDED LEAVE OF ABSENCE POLICY — LSJ, INC.
+Doc ID: POL-012 | Category: Time Off | Version 2.0 | Last updated: 2026-05-02
+Owner: People Operations
+
+1. PURPOSE AND SCOPE
+
+This policy covers leaves of absence longer than ordinary PTO and sick leave: extended medical leave, caregiver leave, military leave, and sabbaticals. Day-to-day PTO, sick leave, parental leave, bereavement, and jury duty are governed by the PTO and Leave Policy (POL-001). Where applicable law (for example FMLA-equivalent statutes) provides greater rights, the law prevails.
+
+2. EXTENDED MEDICAL LEAVE
+
+2.1 Eligibility and duration
+
+Employees with at least 12 months of continuous service may take up to 12 weeks of job-protected extended medical leave per rolling 12-month period for their own serious health condition that prevents them from working.
+
+2.2 Pay during leave
+
+Extended medical leave is unpaid by the Company, but eligible employees receive short-term disability pay (60% of salary for up to 12 weeks after a 7-day waiting period — POL-004, Section 7) which runs concurrently. Employees may use accrued PTO to cover the 7-day STD waiting period.
+
+2.3 Process
+
+Requests go to People Operations at least 30 days in advance where foreseeable, with medical certification from a treating provider. For emergencies, notify People Operations as soon as practicable; certification is due within 15 days. Recertification may be requested every 30 days for ongoing leave.
+
+2.4 Return to work
+
+A fitness-for-duty certification is required before returning from extended medical leave. Employees return to the same or an equivalent position. Requests for modified duties on return follow the accommodations process (POL-016, Section 3).
+
+3. FAMILY CAREGIVER LEAVE
+
+Employees with 12 months of service may take up to 6 weeks per rolling 12-month period of unpaid, job-protected leave to care for an immediate family member with a serious health condition. The certification and notice process mirrors Section 2.3. Employees may apply accrued PTO to receive pay during caregiver leave.
+
+4. MILITARY LEAVE
+
+Employees called to uniformed service receive unpaid leave with reemployment rights as required by applicable law. The Company pays the difference between military pay and base salary for up to 4 weeks per calendar year of annual training service. Notify People Operations with orders as soon as practicable.
+
+5. SABBATICAL PROGRAM
+
+5.1 Eligibility
+
+Regular full-time employees become eligible for one sabbatical after each 7 years of continuous service.
+
+5.2 Terms
+
+A sabbatical is 4 consecutive weeks of fully paid leave, taken within 18 months of reaching eligibility. Sabbatical does not draw down PTO balances. Scheduling requires manager and department head approval at least 90 days in advance, and sabbaticals may not abut a blackout window (POL-001, Section 3.4) without department head sign-off.
+
+5.3 Interaction with other leave
+
+Sabbaticals may not be combined with international remote work beyond the POL-002 Section 5 limits — a sabbatical spent abroad is personal travel, and no work may be performed during it.
+
+6. BENEFITS AND ACCRUALS DURING EXTENDED LEAVE
+
+- Benefits: continue per POL-004, Section 6. For unpaid leave beyond 30 days, continuation coverage rules apply (POL-004, Section 6.2).
+- PTO accrual: continues during paid leave (including sabbatical), pauses during unpaid leave after the first 30 calendar days.
+- Holidays: observed holidays during PAID leave are not charged against leave balances; holidays during unpaid leave are unpaid.
+- 401(k): contributions and matching pause during unpaid periods (no pay to deduct from) and resume automatically on return (POL-004, Section 5).
+
+7. JOB PROTECTION AND NON-RETALIATION
+
+Taking leave under this policy is protected. Retaliation for requesting or taking leave violates the Code of Conduct (POL-005, Section 3.2) and should be reported through POL-005, Section 4 channels. Positions may be temporarily backfilled; return rights per Section 2.4 still apply.
+
+8. REQUESTING EXTENDED LEAVE
+
+All extended leave requests are filed as an HR case in the HR portal under category "Leave — Extended" (see HR Case and Escalation Procedures, POL-015, Section 3). People Operations acknowledges within 2 business days and issues a written determination within 10 business days of receiving complete documentation. The HR assistant may explain this policy and start a case, but eligibility determinations are made only by People Operations (POL-015, Section 6).
+
+9. RELATED DOCUMENTS
+
+- PTO and Leave Policy (POL-001)
+- Benefits Overview (POL-004)
+- Code of Conduct (POL-005)
+- HR Case and Escalation Procedures (POL-015)
+- Workplace Accommodations and Safety Policy (POL-016)
+
+---
+This document is entirely fictional and was generated for an academic software project. It does not describe a real company or real employees.

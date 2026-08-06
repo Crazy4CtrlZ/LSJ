@@ -1,0 +1,90 @@
+LSJ, INC. — WORKING HOURS, OVERTIME, AND TIMEKEEPING POLICY
+Doc ID: POL-011 | Category: Workplace | Version 1.8 | Last updated: 2026-02-02
+Owner: People Operations
+NOTE: SYNTHETIC DOCUMENT — fictional company, created for an academic project.
+
+1. PURPOSE AND SCOPE
+
+This policy defines standard working hours, core hours, overtime rules, and
+timekeeping requirements for LSJ employees. It applies to all regular
+employees. Contractor hours are governed by their service agreements.
+
+2. STANDARD WORKING HOURS
+
+2.1 The standard full-time schedule is 40 hours per week, Monday through
+Friday. Departments may approve alternative schedules (for example 4x10) with
+department head sign-off, provided core hours coverage (Section 3) is
+maintained.
+
+2.2 Part-time schedules of 20-29 hours per week are set in the employment
+agreement and drive prorated PTO accrual (POL-001, Section 2.1) and benefits
+eligibility (POL-004, Section 2.1).
+
+3. CORE HOURS
+
+Core collaboration hours are 10:00-16:00 local time for each employee's home
+office, on all scheduled workdays. Meetings should be scheduled inside core
+hours wherever possible. Employees temporarily working abroad must maintain at
+least 4 hours of overlap with home-office core hours (POL-002, Section 5.5).
+
+4. FLEXIBILITY
+
+Outside core hours, employees may flex start and end times with manager
+awareness. Sustained schedule changes of more than 2 hours from the standard
+department schedule require manager approval in writing.
+
+5. OVERTIME (NON-EXEMPT EMPLOYEES)
+
+5.1 Non-exempt employees are paid 1.5x their regular rate for hours worked
+over 40 in a workweek, and as otherwise required by applicable law.
+
+5.2 All overtime must be approved by the direct manager IN ADVANCE. Working
+unapproved overtime is a timekeeping violation, although the time worked will
+still be paid as required by law.
+
+5.3 Work on an observed company holiday is governed by the Holiday Calendar
+(POL-009, Section 5): 1.5x pay plus a substitute day off, with department head
+approval.
+
+5.4 Exempt employees are not eligible for overtime pay. Sustained excessive
+workload should be raised with the manager or through the escalation paths in
+POL-010, Section 6.
+
+6. TIMEKEEPING
+
+6.1 Non-exempt employees record all time worked in the HR portal timesheet,
+due by 12:00 on the Monday following each workweek. Managers approve
+timesheets by end of day Tuesday.
+
+6.2 Falsifying timesheets is fraud under the Code of Conduct (POL-005,
+Section 7).
+
+6.3 Exempt employees do not submit timesheets but must record full-day
+absences (PTO, sick leave, floating holidays) in the HR portal so balances
+stay accurate (POL-001).
+
+7. BREAKS
+
+Employees working 6 or more consecutive hours take at least a 30-minute
+unpaid meal break. Local law prevails where it requires more. Nursing
+employees have access to lactation rooms and paid break time as described in
+the Workplace Accommodations and Safety Policy (POL-016, Section 5).
+
+8. ON-CALL WORK
+
+Roles with formal on-call rotations receive the on-call stipend defined in
+the Compensation and Payroll Policy (POL-014, Section 6). On-call schedules
+must give each participant at least 2 rotation-free weeks per month unless
+the employee agrees otherwise in writing.
+
+9. RELATED DOCUMENTS
+
+PTO and Leave Policy (POL-001) - Remote and Hybrid Work Policy (POL-002) -
+Benefits Overview (POL-004) - Code of Conduct (POL-005) - Holiday Calendar
+(POL-009) - Performance and Approval Processes (POL-010) - Compensation and
+Payroll Policy (POL-014) - Workplace Accommodations and Safety Policy
+(POL-016)
+
+---
+This document is entirely fictional and was generated for an academic
+software project. It does not describe a real company or real employees.

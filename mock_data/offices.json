@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "description": "Synthetic office directory for LSJ, Inc. — fictional data for an academic project.",
+    "as_of": "2026-08-04"
+  },
+  "offices": [
+    {
+      "office": "Austin HQ",
+      "country": "United States",
+      "timezone": "America/Chicago",
+      "compensation_tier": "B",
+      "holiday_calendar": "US (POL-009 §2)",
+      "anchor_days": ["Tuesday", "Wednesday", "Thursday"]
+    },
+    {
+      "office": "New York",
+      "country": "United States",
+      "timezone": "America/New_York",
+      "compensation_tier": "A",
+      "holiday_calendar": "US (POL-009 §2)",
+      "anchor_days": ["Tuesday", "Wednesday", "Thursday"]
+    },
+    {
+      "office": "London",
+      "country": "United Kingdom",
+      "timezone": "Europe/London",
+      "compensation_tier": "A",
+      "holiday_calendar": "UK local substitution (POL-009 §3)",
+      "anchor_days": ["Tuesday", "Wednesday", "Thursday"]
+    },
+    {
+      "office": "Seoul",
+      "country": "South Korea",
+      "timezone": "Asia/Seoul",
+      "compensation_tier": "B",
+      "holiday_calendar": "Korea local substitution (POL-009 §3)",
+      "anchor_days": ["Tuesday", "Wednesday", "Thursday"]
+    }
+  ]
+}

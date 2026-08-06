@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LSJ HR Copilot</title>
+<style>
+:root{--navy:#1E2761;--ice:#CADCFC;--soft:#EEF3FC;--teal:#0E7C6B;--tealsoft:#E2F2EE;--ink:#1A1D24;--gray:#5B6472;--bord:#D9DEE7}
+*{box-sizing:border-box;margin:0}
+body{font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#F6F7F9;color:var(--ink);display:flex;flex-direction:column;height:100vh}
+header{background:var(--navy);color:#fff;padding:12px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{font-size:17px}
+header .st{font-size:12px;color:var(--ice)}
+header .st b{color:#7BE0B0}
+select,button,input[type=text]{font:inherit}
+#emp{border-radius:8px;border:none;padding:6px 10px}
+.demo{background:#2A3575;color:var(--ice);border:none;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:13px}
+main{flex:1;overflow-y:auto;padding:20px;max-width:900px;width:100%;margin:0 auto}
+.msg{max-width:82%;border-radius:14px;padding:10px 14px;margin-bottom:12px;white-space:pre-wrap}
+.u{background:var(--navy);color:#fff;margin-left:auto}
+.a{background:#fff;border:1px solid var(--bord)}
+.cite{display:inline-block;background:var(--tealsoft);color:var(--teal);border-radius:6px;padding:1px 8px;font-size:12px;font-weight:700;margin:6px 6px 0 0}
+details{margin-top:8px;font-size:12.5px;color:var(--gray)}
+details pre{background:var(--soft);border-radius:8px;padding:8px 10px;overflow-x:auto;font-size:11.5px;margin-top:6px}
+.think{color:var(--gray);font-style:italic}
+form{display:flex;gap:10px;padding:14px 20px;background:#fff;border-top:1px solid var(--bord);max-width:900px;width:100%;margin:0 auto}
+#q{flex:1;border:1px solid var(--bord);border-radius:10px;padding:10px 14px}
+#send{background:var(--navy);color:#fff;border:none;border-radius:10px;padding:10px 18px;cursor:pointer;font-weight:600}
+label.cf{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--gray)}
+</style>
+</head>
+<body>
+<header>
+  <h1>LSJ HR Copilot</h1>
+  <span class="st" id="health">connecting…</span>
+  <span style="flex:1"></span>
+  <label class="st">Employee:
+    <select id="emp">
+      <option value="">(none)</option>
+      <option value="EMP004">EMP004 · Daniel Park</option>
+      <option value="EMP007">EMP007 · Tom Okafor</option>
+      <option value="EMP003">EMP003 · Priya Nair (contractor)</option>
+      <option value="EMP009">EMP009 · Jae-won Lee (new hire)</option>
+      <option value="EMP011">EMP011 · Emma Fischer (low balance)</option>
+    </select>
+  </label>
+  <button class="demo" onclick="demoA()">▶ Demo A: PTO</button>
+  <button class="demo" onclick="demoB()">▶ Demo B: Remote work</button>
+</header>
+<main id="chat">
+  <div class="msg a">Hi! I'm LSJ's HR assistant. Ask me about PTO, remote work, expenses, benefits and more —
+every answer cites the exact policy section it came from. Pick your employee ID for personal questions,
+or press a Demo button to reproduce a grader task.</div>
+</main>
+<form id="f">
+  <input id="q" type="text" placeholder="e.g. Can I take 3 days of PTO next week?" autocomplete="off">
+  <label class="cf"><input type="checkbox" id="confirm"> I confirm the proposed action</label>
+  <button id="send">Send</button>
+</form>
+<script>
+const chat = document.getElementById("chat");
+let history = [];
+async function refreshHealth(){
+  try{
+    const h = await (await fetch("/health")).json();
+    document.getElementById("health").innerHTML =
+      `<b>●</b> ${h.status} · MCP ${h.mcp_connected ? "✓ "+h.tools_count+" tools" : "✗"} · index ${h.index_size} chunks`;
+  }catch(e){ document.getElementById("health").textContent = "health check failed"; }
+}
+refreshHealth();
+function add(cls, html){
+  const d = document.createElement("div");
+  d.className = "msg " + cls; d.innerHTML = html;
+  chat.appendChild(d); chat.scrollTop = chat.scrollHeight; return d;
+}
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+async function send(text){
+  if(!text.trim()) return;
+  add("u", esc(text));
+  const thinking = add("a think", "working — planning, calling tools…");
+  const body = {
+    message: text,
+    employee_id: document.getElementById("emp").value || null,
+    history: history.slice(-8),
+    confirm_action: document.getElementById("confirm").checked,
+  };
+  try{
+    const r = await (await fetch("/chat", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)})).json();
+    let html = esc(r.answer);
+    if(r.citations && r.citations.length){
+      html += "<br>" + r.citations.map(c=>`<span class="cite">${c.doc_id} §${c.section}</span>`).join("");
+    }
+    if(r.tool_trace && r.tool_trace.length){
+      const rows = r.tool_trace.map((t,i)=>`${i+1}. ${t.tool}(${esc(JSON.stringify(t.args))}) ${t.ok?"✓":"✗ "+(t.error_code||"")}\n   → ${esc(t.result_summary)}`).join("\n");
+      html += `<details><summary>▸ What the AI did — ${r.tool_trace.length} tool call(s)</summary><pre>${rows}</pre></details>`;
+    }
+    thinking.outerHTML = `<div class="msg a">${html}</div>`;
+    history.push({role:"user", content:text}, {role:"assistant", content:r.answer});
+    document.getElementById("confirm").checked = false;
+  }catch(e){ thinking.textContent = "request failed: " + e; }
+}
+document.getElementById("f").addEventListener("submit", e=>{ e.preventDefault(); const q=document.getElementById("q"); send(q.value); q.value=""; });
+function demoA(){ document.getElementById("emp").value="EMP004"; send("Can I take 3 days of PTO next week?"); }
+function demoB(){ document.getElementById("emp").value="EMP007"; send("Can I work from Portugal for six weeks?"); }
+</script>
+</body>
+</html>

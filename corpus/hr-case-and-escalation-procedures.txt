@@ -1,0 +1,77 @@
+HR CASE AND ESCALATION PROCEDURES — LSJ, INC.
+Doc ID: POL-015 | Category: HR Operations | Version 1.5 | Last updated: 2026-06-20
+Owner: People Operations
+
+1. PURPOSE AND SCOPE
+
+This document describes how HR requests and concerns are filed, categorized, prioritized, and escalated at LSJ, including what self-service tools and the HR assistant may and may not do. It applies to all employees, contractors, and interns.
+
+2. CHANNELS
+
+1. *HR portal (primary)* — file an HR case, submit PTO and remote-work requests, view balances and pay statements.
+2. *HR assistant* — answers policy questions with citations and can open cases on the employee's behalf (Section 6).
+3. *People Operations partner* — direct contact for complex or sensitive matters.
+4. *Ethics Line* — confidential and anonymous reporting channel for conduct concerns (POL-005, Section 4.1).
+
+3. CASE CATEGORIES
+
+  Category | Examples | First response SLA
+  Time Off | PTO disputes, balance corrections | 3 business days
+  Leave — Extended | Medical, caregiver, military, sabbatical (POL-012) | 2 business days
+  Benefits | Eligibility, enrollment, claims (POL-004, Section 9) | 3 business days
+  Payroll | Errors, deductions (POL-014, Section 8) | 3 business days
+  Workplace | Remote work exceptions (POL-002, Section 5.4), accommodations intake | 3 business days
+  Conduct — Sensitive | Harassment, discrimination, retaliation, safety (POL-005) | 2 business days, human-only
+  Other | Anything else | 5 business days
+
+SLAs are measured in the employee's home-office business days. Resolution targets vary by complexity and are communicated in the case.
+
+4. PRIORITY AND ESCALATION
+
+4.1 Priority levels
+
+- *P1 — Urgent:* safety risks, imminent-harm concerns, payroll failures affecting a pay date. Acknowledged same business day.
+- *P2 — High:* time-sensitive determinations (leave start dates, enrollment windows closing within 5 business days).
+- *P3 — Standard:* everything else.
+
+4.2 Escalation path
+
+Cases unresolved past SLA escalate automatically: case owner → People Operations team lead → Director of People Operations. Employees may also escalate manually from the case view. Manager-related concerns follow POL-010, Section 6; conduct concerns always follow POL-005, Section 4.
+
+5. SENSITIVE CASE HANDLING
+
+Cases in the "Conduct — Sensitive" category are visible only to trained case managers and Legal. They are never handled by automated systems (POL-005, Section 4.2). Anonymous Ethics Line reports receive a case number allowing two-way anonymous follow-up.
+
+6. WHAT AUTOMATED TOOLS MAY DO
+
+The HR assistant and other self-service automation MAY:
+
+1. Answer policy questions using official policy documents, with citations to document and section.
+2. Look up the requesting employee's own profile, balances, and benefits status.
+3. Draft messages (for example to a manager) for the employee to review and send.
+4. Open a mock/draft HR case or ticket for the employee to confirm before submission.
+5. Route the employee to the correct category, form, or human contact.
+
+The HR assistant and automation MUST NOT:
+
+1. Make final eligibility, approval, or disciplinary determinations (reserved to People Operations and the approvers in POL-010, Section 4).
+2. Handle Conduct — Sensitive matters beyond acknowledging and routing to humans (POL-005, Section 4.2).
+3. Modify balances, records, or elections directly.
+4. Answer questions outside company policy scope; out-of-scope questions are declined with a referral to appropriate resources.
+5. Access another employee's personal records for a requester without authorization.
+
+7. DOCUMENTATION AND PRIVACY
+
+Case contents are Confidential (POL-007, Section 3), retained per the records schedule, and accessible only to those with a need to know. Employees may request a copy of their own case history through a "Other" category case.
+
+8. RELATED DOCUMENTS
+
+- Code of Conduct (POL-005)
+- Performance and Approval Processes (POL-010)
+- Extended Leave of Absence Policy (POL-012)
+- Benefits Overview (POL-004)
+- Compensation and Payroll Policy (POL-014)
+- Data Security Policy (POL-007)
+
+---
+This document is entirely fictional and was generated for an academic software project. It does not describe a real company or real employees.
