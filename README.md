@@ -7,7 +7,7 @@ answers with a visible tool-call trace.
 
 > Quantic MSAIE · AI Engineering Techniques and Architectures · Group project
 
-**Deployed URL:** _add after first Render deploy — see `deployed.md`_
+**Deployed URL:** https://lsj-ej43.onrender.com — see `deployed.md` (free tier: first request after ~15 idle minutes takes ~30–60 s to wake)
 
 ## Architecture (one free-tier service)
 
