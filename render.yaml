@@ -4,7 +4,7 @@ services:
     name: lsj-hr-copilot
     runtime: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python -m rag.ingest
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GROQ_API_KEY
@@ -14,6 +14,7 @@ services:
       - key: RETRIEVAL_K
         value: "4"
       - key: BUILD_INDEX_ON_START
-        value: "1"           # index builds on first boot (adds to the first cold start; documented)
+        value: "0"           # index is built during the build phase (buildCommand) — never at runtime
+                             # (runtime build OOM'd the 512 MB free instance; build machines have more RAM)
       - key: PYTHON_VERSION
         value: "3.11.9"

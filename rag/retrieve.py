@@ -28,8 +28,10 @@ def _store() -> dict:
 
 
 def index_size() -> int:
+    """Chunk count from meta.json — deliberately avoids touching chromadb so the
+    FastAPI parent process stays light; chroma loads only inside the MCP server."""
     try:
-        return _collection().count()
+        return int(json.loads((config.INDEX_DIR / "meta.json").read_text(encoding="utf-8"))["chunks"])
     except Exception:
         return 0
 

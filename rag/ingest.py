@@ -214,7 +214,11 @@ def build_index(corpus_dir: Path | None = None, index_dir: Path | None = None) -
             documents=[f"{c['metadata']['title']} — {c['metadata']['section_title']}\n{c['text']}" for c in batch],
             metadatas=[c["metadata"] for c in batch],
         )
-    return col.count()
+    n = col.count()
+    # Lightweight index metadata so the runtime can report size without loading
+    # chromadb (keeps the 512 MB Render instance memory-light — see design doc §2).
+    (index_dir / "meta.json").write_text(json.dumps({"chunks": n}), encoding="utf-8")
+    return n
 
 
 if __name__ == "__main__":

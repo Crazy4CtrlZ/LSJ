@@ -21,7 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from mcp.server.fastmcp import FastMCP  # noqa: E402
+from mcp.server.fastmcp import FastMCP  # noqa: E402  (mcp SDK 1.x — pinned <2 in requirements.txt)
 
 from app import config  # noqa: E402
 
