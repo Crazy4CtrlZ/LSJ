@@ -10,6 +10,7 @@ confirmation box on that request — the model cannot self-approve actions.
 """
 from __future__ import annotations
 
+import asyncio
 import json
 from typing import Any
 
@@ -84,10 +85,23 @@ class Orchestrator:
         answer = "I couldn't complete this request — please try rephrasing."
 
         for _ in range(config.MAX_AGENT_ROUNDS):
-            resp = await self.llm.chat.completions.create(
-                model=config.MODEL, temperature=config.TEMPERATURE,
-                messages=messages, tools=self.mcp.tools, tool_choice="auto",
-            )
+            resp = None
+            for attempt in range(3):  # Groq free tier rate-limits under load — retry with backoff, then degrade honestly
+                try:
+                    resp = await self.llm.chat.completions.create(
+                        model=config.MODEL, temperature=config.TEMPERATURE,
+                        messages=messages, tools=self.mcp.tools, tool_choice="auto",
+                    )
+                    break
+                except Exception as e:
+                    print(f"[orchestrator] LLM call failed (attempt {attempt + 1}/3): {e}")
+                    if attempt < 2:
+                        await asyncio.sleep(2 * (attempt + 1) ** 2)  # 2s, then 8s
+            if resp is None:
+                return {"answer": "The language model is temporarily unavailable — most likely the free-tier "
+                                  "rate limit under heavy use. Nothing is wrong with your request; please try "
+                                  "again in a minute.",
+                        "citations": [], "snippets": [], "tool_trace": trace, "degraded": True}
             msg = resp.choices[0].message
             if not msg.tool_calls:
                 answer = msg.content or answer

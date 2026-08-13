@@ -76,8 +76,14 @@ async def health():
 
 @app.post("/chat")
 async def chat(req: ChatRequest):
-    result = await app.state.orchestrator.chat(
-        message=req.message, employee_id=req.employee_id,
-        history=req.history, confirm_action=req.confirm_action,
-    )
+    try:
+        result = await app.state.orchestrator.chat(
+            message=req.message, employee_id=req.employee_id,
+            history=req.history, confirm_action=req.confirm_action,
+        )
+    except Exception as e:  # never surface a bare 500 to the UI — degrade honestly (rubric: graceful failure)
+        print(f"[chat] unhandled error: {type(e).__name__}: {e}")
+        result = {"answer": "Something went wrong handling this request. Please try again — if it persists, "
+                            "the service may be rate-limited or restarting.",
+                  "citations": [], "snippets": [], "tool_trace": [], "degraded": True}
     return JSONResponse(result)
