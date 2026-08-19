@@ -167,7 +167,9 @@ class Orchestrator:
         # Grounding enforcement (orchestration-layer guardrail): if the answer references policy
         # documents that were never retrieved in this request, fetch them and re-synthesize once.
         # Deterministic — does not rely on the model choosing to be thorough.
-        mentioned = set(re.findall(r"POL-\d{3}", answer or ""))
+        # Normalize unicode hyphen variants (gpt-oss emits U+2011 non-breaking hyphens) before matching
+        _norm = re.sub(r"[‐‑‒–—−]", "-", answer or "")
+        mentioned = set(re.findall(r"POL-\d{3}", _norm))
         unbacked = sorted(mentioned - {c["doc_id"] for c in citations.values()})
         if unbacked:
             evidence: list[str] = []
