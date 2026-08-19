@@ -14,7 +14,7 @@ answers with a visible tool-call trace.
 ```
 Browser ── FastAPI (/ · /chat · /health)
               │
-        Agent Orchestrator  ←→  Groq LLM (llama-3.3-70b-versatile)
+        Agent Orchestrator  ←→  Groq LLM (openai/gpt-oss-120b)
               │  agentic loop · guardrails · trace
         MCP Client (official SDK, stdio)
               │  tool discovery + calls (JSON-RPC)

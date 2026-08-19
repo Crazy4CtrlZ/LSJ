@@ -10,7 +10,7 @@ services:
       - key: GROQ_API_KEY
         sync: false          # set the real value in the Render dashboard
       - key: MODEL
-        value: llama-3.3-70b-versatile
+        value: openai/gpt-oss-120b
       - key: RETRIEVAL_K
         value: "4"
       - key: BUILD_INDEX_ON_START

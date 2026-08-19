@@ -83,6 +83,7 @@ class Orchestrator:
         trace: list[dict] = []
         citations: dict[str, dict] = {}
         answer = "I couldn't complete this request — please try rephrasing."
+        synthesized = False
 
         for _ in range(config.MAX_AGENT_ROUNDS):
             resp = None
@@ -105,6 +106,7 @@ class Orchestrator:
             msg = resp.choices[0].message
             if not msg.tool_calls:
                 answer = msg.content or answer
+                synthesized = True
                 break
 
             messages.append({"role": "assistant", "content": msg.content,
@@ -136,6 +138,20 @@ class Orchestrator:
                     })
                 messages.append({"role": "tool", "tool_call_id": tc.id,
                                  "content": json.dumps(result, ensure_ascii=False)[:6000]})
+
+        if not synthesized:
+            # Rounds exhausted while the model was still requesting tools (thorough models do this) —
+            # force one no-tools pass so the user always gets a grounded final answer, never the fallback.
+            try:
+                messages.append({"role": "user", "content":
+                    "Provide your final answer now from the information already gathered, "
+                    "citing [POL-xxx §y.z] for each claim."})
+                resp = await self.llm.chat.completions.create(
+                    model=config.MODEL, temperature=config.TEMPERATURE,
+                    messages=messages, tools=self.mcp.tools, tool_choice="none")
+                answer = resp.choices[0].message.content or answer
+            except Exception as e:
+                print(f"[orchestrator] forced final synthesis failed: {e}")
 
         cited = list(citations.values())
         return {

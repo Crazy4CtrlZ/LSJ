@@ -10,6 +10,10 @@ Verified 2026-08-06: `/health` → `{"status":"ok","mcp_connected":true,"tools_c
 `"model":"llama-3.3-70b-versatile","llm_configured":true}`; Demo A (`/chat`, EMP004) returns a grounded
 answer with full tool trace.
 
+**2026-08 update:** Groq decommissioned all Llama chat models mid-project; the service now runs
+`openai/gpt-oss-120b` (set via the `MODEL` env var — a config change, not a code change), re-verified
+with both demo tasks.
+
 ## Free-tier cold-start notes
 - The instance sleeps after ~15 minutes of inactivity; the next request takes ~30–60 s while it wakes.
 - The policy index is built during the **build phase** (`buildCommand` runs `python -m rag.ingest`;

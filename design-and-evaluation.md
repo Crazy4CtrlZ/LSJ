@@ -8,7 +8,7 @@ Single free-tier web service (the rubric-recommended pattern), also runnable loc
 Browser ──HTTP──▶ FastAPI Web App          GET / (chat UI) · POST /chat · GET /health
                      │
                 Agent Orchestrator         agentic loop · guardrails · operational trace
-                     │            ⇄        Groq LLM (llama-3.3-70b-versatile, temperature 0)
+                     │            ⇄        Groq LLM (openai/gpt-oss-120b, temperature 0)
                 MCP Client                 official Python SDK · stdio · tool discovery at startup
                      │  JSON-RPC/stdio
                 MCP Server (FastMCP)       7 tools (contract v1.0 below)
@@ -31,7 +31,7 @@ layer** = the MCP server. CI/CD (GitHub Actions) gates a Render deploy hook on g
 | Vector store | ChromaDB, persistent, embedded | Zero cost, no external service, deterministic rebuild at deploy; rubric explicitly allows a local store built during deployment. |
 | Chunking | Heading-aware (content-aware) per numbered section; token-window (350 words, 60 overlap) fallback | Corpus documents all carry numbered sections → chunks align to citable units (doc_id + §section); overlap prevents boundary loss. Stable chunk ids make ingestion deterministic (fixed-seed requirement). |
 | Retrieval | top-k (default k=4, env-tunable) + optional doc/category filters; agent performs query rewriting naturally in the loop | k chosen by ablation (§5); filters exposed as tool parameters so the agent can narrow scope. |
-| LLM | Groq free tier, llama-3.3-70b-versatile, temperature 0 | Free, fast, native tool calling; deterministic-leaning outputs for reproducible demos. Fallback model (llama-3.1-8b-instant) and OpenRouter documented via env vars. |
+| LLM | Groq free tier, openai/gpt-oss-120b, temperature 0 | Free, fast, native tool calling; deterministic-leaning outputs for reproducible demos. Fallback (openai/gpt-oss-20b) and OpenRouter documented via env vars. **Provider-risk lesson:** the project originally used llama-3.3-70b-versatile; Groq decommissioned all Llama chat models mid-project (2026-08). Because the model is an env-driven config value — not code — the swap was a one-line change, verified by re-running the demo tasks. |
 | Safety guardrails | See §4 | Rubric §3/§4 requirements mapped one-to-one. |
 
 ## 3. MCP server design and tool schemas (contract v1.0)
