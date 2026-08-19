@@ -58,7 +58,10 @@ _next_ticket = int(_tickets_file["_meta"]["next_ticket_id"].split("-")[1])
 def search_policy_documents(query: str, k: int = 4, doc_filter: str = "", category_filter: str = "") -> dict:
     """Semantic search over LSJ's policy library. Returns the k most relevant policy excerpts with
     citation metadata (doc_id, section, snippet, similarity score). Use this to find policy evidence
-    before answering any policy question. Empty results mean the corpus does not cover the topic."""
+    before answering any policy question. Filters are optional — prefer NO filter unless you know the
+    exact value. doc_filter takes a doc id like POL-002. category_filter accepts only: Time Off,
+    Benefits, Workplace, Security, Finance, Conduct, Compensation, Management, HR Operations.
+    Empty results mean the corpus does not cover the topic."""
     if not query.strip():
         return _err("INVALID_ARGUMENT", "query must be a non-empty string")
     try:
@@ -68,6 +71,11 @@ def search_policy_documents(query: str, k: int = 4, doc_filter: str = "", catego
             return _err("INTERNAL", "policy index not built — run `python -m rag.ingest` first")
         results = retrieve.search(query, k=k, doc_filter=doc_filter or None,
                                   category_filter=category_filter or None)
+        if not results and (doc_filter or category_filter):
+            # Defensive fallback: a wrong filter guess must not masquerade as "corpus has nothing".
+            results = retrieve.search(query, k=k)
+            note = {"filter_fallback": "filtered search returned 0 results; showing unfiltered results"}
+            return _ok({"results": results, **note})
         return _ok({"results": results})
     except Exception as e:  # graceful failure (rubric)
         return _err("INTERNAL", f"search failed: {e}")
