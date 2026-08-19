@@ -17,6 +17,7 @@ MODEL = os.getenv("MODEL", "openai/gpt-oss-120b")  # Groq removed all Llama chat
 TEMPERATURE = float(os.getenv("TEMPERATURE", "0"))
 RETRIEVAL_K = int(os.getenv("RETRIEVAL_K", "4"))
 MAX_AGENT_ROUNDS = int(os.getenv("MAX_AGENT_ROUNDS", "8"))  # gpt-oss-120b explores more thoroughly than llama did
+REASONING_EFFORT = os.getenv("REASONING_EFFORT", "low")  # gpt-oss models: low cuts multi-round latency ~5x; quality comes from grounding, not private deliberation
 BUILD_INDEX_ON_START = os.getenv("BUILD_INDEX_ON_START", "1") == "1"
 
 COLLECTION_NAME = "lsj_policies"

@@ -62,6 +62,9 @@ class Orchestrator:
     def __init__(self, mcp: MCPClient):
         self.mcp = mcp
         self.llm = AsyncOpenAI(api_key=config.GROQ_API_KEY, base_url=config.GROQ_BASE_URL) if config.GROQ_API_KEY else None
+        # reasoning_effort applies to gpt-oss reasoning models only; harmless to omit elsewhere
+        self._extra = {"reasoning_effort": config.REASONING_EFFORT} \
+            if ("gpt-oss" in config.MODEL and config.REASONING_EFFORT) else {}
 
     async def chat(self, message: str, employee_id: str | None = None,
                    history: list[dict] | None = None, confirm_action: bool = False) -> dict[str, Any]:
@@ -92,6 +95,7 @@ class Orchestrator:
                     resp = await self.llm.chat.completions.create(
                         model=config.MODEL, temperature=config.TEMPERATURE,
                         messages=messages, tools=self.mcp.tools, tool_choice="auto",
+                        extra_body=self._extra,
                     )
                     break
                 except Exception as e:
@@ -148,7 +152,8 @@ class Orchestrator:
                     "citing [POL-xxx §y.z] for each claim."})
                 resp = await self.llm.chat.completions.create(
                     model=config.MODEL, temperature=config.TEMPERATURE,
-                    messages=messages, tools=self.mcp.tools, tool_choice="none")
+                    messages=messages, tools=self.mcp.tools, tool_choice="none",
+                    extra_body=self._extra)
                 answer = resp.choices[0].message.content or answer
             except Exception as e:
                 print(f"[orchestrator] forced final synthesis failed: {e}")
