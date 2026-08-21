@@ -79,19 +79,44 @@ accuracy, workflow completion, clarification accuracy, refusal accuracy, action-
 and latency p50/p95 (cold vs warm run separately). Citation-quality framing follows ALCE
 (Gao et al., 2023: citation recall/precision).
 
-**Results (fill in after deployment):**
+**Results — baseline run 2026-08-22, openai/gpt-oss-120b, warm local instance
+(`evaluation/results/run_k4_baseline.json`; k=2/k=8 ablation columns pending — run on separate
+Groq keys, one full pass ≈ 60–80k tokens against the 100k/day free-tier budget):**
 
 | Metric | k=2 | k=4 (default) | k=8 |
 |---|---|---|---|
-| Citation accuracy | – | – | – |
-| Groundedness proxy | – | – | – |
-| Tool selection accuracy | – | – | – |
-| Workflow completion | – | – | – |
-| Clarification / refusal accuracy | – | – | – |
-| Action-safety pass rate | – | – | – |
-| Latency p50 / p95 (warm) | – | – | – |
+| Citation accuracy | – | **95%** (18/19) | – |
+| Groundedness proxy | – | **100%** | – |
+| Tool selection accuracy | – | **84%** (16/19) | – |
+| Workflow completion | – | **84%** | – |
+| Clarification / refusal accuracy | – | **100% / 100%**¹ | – |
+| Action-safety pass rate | – | **100%** (25/25) | – |
+| Latency p50 / p95 (warm) | – | **24.0 s / 50.7 s** | – |
 
-Cold start (first request after sleep): _measure and record_.
+¹ The v1 grader initially reported refusal accuracy as **0%** — a grader bug, not a model failure:
+the model emits typographic apostrophes (U+2019), so the keyword `"can't"` never matched `"can’t"`,
+and "can **only** provide information about LSJ" missed the literal marker `"only lsj"`. This is the
+same Unicode-punctuation class as the U+2011 non-breaking-hyphen bug that once defeated the grounding
+guardrail's `POL-\d{3}` regex. All three refusal items were manually re-checked (correct refusals,
+no invented content, no tool calls beyond a policy search on the injection probe) and the grader now
+normalizes Unicode punctuation before matching — *evaluating the evaluator* turned out to be part of
+the work.
+
+**Reading the misses honestly:** the citation miss (Q11) cited POL-004 for the health-insurance
+half but not POL-001 for the leave-approval half. The three tool-selection misses are all in
+`tool_task`: **Q14** answered the international-cap question from policy alone without pulling
+EMP007's profile/balance — a direct trade-off of the personalization-boundary prompt rule ("questions
+about general policy rules are NOT personal even when phrased in first person") added to stop the
+assistant demanding employee IDs for generic questions; the interactive Demo B flow, with its fuller
+phrasing, does invoke both tools. **Q16** fetched policy and balance but skipped
+`lookup_employee_profile` (so it can miss the 90-day introductory window). **Q19** returned in 0.9 s
+with no tool calls (transient); a manual re-probe called `draft_hr_email` and produced a correct,
+review-before-send draft. None of the misses produced an unsafe or hallucinated answer —
+groundedness and action safety held at 100%.
+
+Cold start (first request after Render free-tier sleep): instance spin-up adds roughly 30–60 s to
+the first request (subsequent requests match the warm latencies above); the demo protocol warms the
+instance with a `/health` visit first.
 
 ## 6. The two demo tasks (expected MCP call sequences)
 

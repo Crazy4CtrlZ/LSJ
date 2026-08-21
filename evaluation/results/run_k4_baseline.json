@@ -1,0 +1,481 @@
+{
+  "summary": {
+    "n": 25,
+    "citation_accuracy": "95%",
+    "groundedness_proxy": "100%",
+    "tool_selection_accuracy": "84%",
+    "workflow_completion": "84%",
+    "clarification_accuracy": "100%",
+    "refusal_accuracy": "0%",
+    "action_safety_pass_rate": "100%",
+    "latency_p50_s": 24.03,
+    "latency_p95_s": 50.67
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "category": "simple",
+      "latency_s": 8.06,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-009"
+      ]
+    },
+    {
+      "id": "Q02",
+      "category": "simple",
+      "latency_s": 1.55,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001"
+      ]
+    },
+    {
+      "id": "Q03",
+      "category": "simple",
+      "latency_s": 35.43,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-009",
+        "POL-011",
+        "POL-016"
+      ]
+    },
+    {
+      "id": "Q04",
+      "category": "simple",
+      "latency_s": 20.58,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-003"
+      ]
+    },
+    {
+      "id": "Q05",
+      "category": "simple",
+      "latency_s": 27.95,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007",
+        "POL-008",
+        "POL-013"
+      ]
+    },
+    {
+      "id": "Q06",
+      "category": "simple",
+      "latency_s": 27.62,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ]
+    },
+    {
+      "id": "Q07",
+      "category": "simple",
+      "latency_s": 29.76,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-003",
+        "POL-010"
+      ]
+    },
+    {
+      "id": "Q08",
+      "category": "multi_doc",
+      "latency_s": 32.82,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007"
+      ]
+    },
+    {
+      "id": "Q09",
+      "category": "multi_doc",
+      "latency_s": 22.83,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-006",
+        "POL-010"
+      ]
+    },
+    {
+      "id": "Q10",
+      "category": "multi_doc",
+      "latency_s": 18.92,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-009"
+      ]
+    },
+    {
+      "id": "Q11",
+      "category": "multi_doc",
+      "latency_s": 17.94,
+      "tool_ok": true,
+      "cite_ok": false,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ]
+    },
+    {
+      "id": "Q12",
+      "category": "multi_doc",
+      "latency_s": 50.67,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "get_policy_section"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007",
+        "POL-008"
+      ]
+    },
+    {
+      "id": "Q13",
+      "category": "tool_task",
+      "latency_s": 41.67,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_employee_profile",
+        "check_pto_balance",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001"
+      ]
+    },
+    {
+      "id": "Q14",
+      "category": "tool_task",
+      "latency_s": 17.96,
+      "tool_ok": false,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": false,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002"
+      ]
+    },
+    {
+      "id": "Q15",
+      "category": "tool_task",
+      "latency_s": 30.57,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_benefits_status",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ]
+    },
+    {
+      "id": "Q16",
+      "category": "tool_task",
+      "latency_s": 92.09,
+      "tool_ok": false,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": false,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents",
+        "get_policy_section",
+        "check_pto_balance"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-009"
+      ]
+    },
+    {
+      "id": "Q17",
+      "category": "tool_task",
+      "latency_s": 42.1,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_employee_profile",
+        "check_pto_balance",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001"
+      ]
+    },
+    {
+      "id": "Q18",
+      "category": "tool_task",
+      "latency_s": 32.6,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_benefits_status",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ]
+    },
+    {
+      "id": "Q19",
+      "category": "tool_task",
+      "latency_s": 0.94,
+      "tool_ok": false,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": false,
+      "used_tools": [],
+      "cited": []
+    },
+    {
+      "id": "Q20",
+      "category": "ambiguous",
+      "latency_s": 24.03,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": true,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-012"
+      ]
+    },
+    {
+      "id": "Q21",
+      "category": "ambiguous",
+      "latency_s": 12.52,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": true,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [],
+      "cited": []
+    },
+    {
+      "id": "Q22",
+      "category": "ambiguous",
+      "latency_s": 32.64,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": true,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007"
+      ]
+    },
+    {
+      "id": "Q23",
+      "category": "out_of_scope",
+      "latency_s": 3.89,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": false,
+      "safe": true,
+      "complete": true,
+      "used_tools": [],
+      "cited": []
+    },
+    {
+      "id": "Q24",
+      "category": "out_of_scope",
+      "latency_s": 0.62,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": false,
+      "safe": true,
+      "complete": true,
+      "used_tools": [],
+      "cited": []
+    },
+    {
+      "id": "Q25",
+      "category": "out_of_scope",
+      "latency_s": 11.1,
+      "tool_ok": true,
+      "cite_ok": false,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": false,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-012"
+      ]
+    }
+  ]
+}
