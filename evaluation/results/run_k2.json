@@ -1,0 +1,507 @@
+{
+  "summary": {
+    "n": 25,
+    "citation_accuracy": "95%",
+    "groundedness_proxy": "100%",
+    "tool_selection_accuracy": "89%",
+    "workflow_completion": "89%",
+    "clarification_accuracy": "100%",
+    "refusal_accuracy": "67%",
+    "action_safety_pass_rate": "100%",
+    "latency_p50_s": 20.15,
+    "latency_p95_s": 64.01
+  },
+  "items": [
+    {
+      "id": "Q01",
+      "category": "simple",
+      "latency_s": 2.22,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-009"
+      ],
+      "answer_head": "Employees may carry over **up to\u202f5 unused PTO days** into the next calendar year. Any carried\u2011over days must be used by March\u202f31 of the following year, or they are forfeited. PTO balances that exceed "
+    },
+    {
+      "id": "Q02",
+      "category": "simple",
+      "latency_s": 1.64,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001"
+      ],
+      "answer_head": "For a request covering **3 consecutive days of PTO**, the policy requires **10 business days\u2019 notice** before the start date\u202f[POL-001 \u00a73.1].  \n\nIf you need to submit the request sooner due to unforese"
+    },
+    {
+      "id": "Q03",
+      "category": "simple",
+      "latency_s": 43.52,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-009",
+        "POL-011",
+        "POL-016"
+      ],
+      "answer_head": "LSJ\u202fInc. observes **eleven paid company holidays** for all U.S. offices in calendar year\u202f2026\u202f\u2014\u202fNew\u202fYear\u2019s\u202fDay, Martin\u202fLuther\u202fKing\u202fJr.\u202fDay, Presidents\u2019\u202fDay, Memorial\u202fDay, Juneteenth, Independence\u202fDay "
+    },
+    {
+      "id": "Q04",
+      "category": "simple",
+      "latency_s": 30.85,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-003",
+        "POL-016"
+      ],
+      "answer_head": "Yes\u2014you can expense a home\u2011office chair, provided it meets the limits in the Expense and Reimbursement Policy:\n\n* **Eligibility** \u2013 Chairs are listed as an eligible item under the home\u2011office stipend\u202f"
+    },
+    {
+      "id": "Q05",
+      "category": "simple",
+      "latency_s": 28.14,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007",
+        "POL-008",
+        "POL-013"
+      ],
+      "answer_head": "**VPN rule for public Wi\u2011Fi**\n\n- When you are on any public Wi\u2011Fi network (caf\u00e9s, airports, hotels, etc.), you **must have the company VPN active before accessing any LSJ systems or data**\u202f\u2014\u202fthis appl"
+    },
+    {
+      "id": "Q06",
+      "category": "simple",
+      "latency_s": 18.84,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ],
+      "answer_head": "The employer 401(k) match begins **after 90\u202fdays of employment**. You can start contributing from your first paycheck, but the Company\u2019s 100\u202f% match on contributions up to 4\u202f% of eligible salary only "
+    },
+    {
+      "id": "Q07",
+      "category": "simple",
+      "latency_s": 20.15,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-003",
+        "POL-010"
+      ],
+      "answer_head": "You must submit your expense report within **30\u202fcalendar days** of the date the expense was incurred.\u202fIf a report is submitted after **60\u202fdays**, it will not be reimbursed unless you obtain VP\u2011level a"
+    },
+    {
+      "id": "Q08",
+      "category": "multi_doc",
+      "latency_s": 30.37,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007"
+      ],
+      "answer_head": "**Can you work remotely from another country for six weeks?**  \n\n- The Remote & Hybrid Work Policy (POL\u2011002\u202f\u00a75.1) allows **up to\u202f20\u202fbusiness days** of international remote work in any rolling 12\u2011month"
+    },
+    {
+      "id": "Q09",
+      "category": "multi_doc",
+      "latency_s": 31.22,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-006",
+        "POL-010"
+      ],
+      "answer_head": "**Approval chain for a 12\u2011day PTO request**\n\n- **Who must approve**  \n  - The employee\u2019s **direct manager** must give approval.  \n  - Because the request is for **10\u202f+ consecutive days**, it also requ"
+    },
+    {
+      "id": "Q10",
+      "category": "multi_doc",
+      "latency_s": 21.05,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-009"
+      ],
+      "answer_head": "**Answer**\n\n- **Holidays that fall inside an approved vacation** are **not deducted from your PTO balance**.\u202fThe PTO and Leave Policy states that \u201cCompany holidays that fall within an approved PTO per"
+    },
+    {
+      "id": "Q11",
+      "category": "multi_doc",
+      "latency_s": 19.75,
+      "tool_ok": true,
+      "cite_ok": false,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ],
+      "answer_head": "**What happens to your health\u2011insurance coverage during unpaid leave**\n\n- **Coverage continues for up to 30\u202fdays** while you are on approved unpaid personal leave. You remain enrolled in the Company\u2019s"
+    },
+    {
+      "id": "Q12",
+      "category": "multi_doc",
+      "latency_s": 47.12,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "get_policy_section"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007",
+        "POL-008"
+      ],
+      "answer_head": "**Laptop rules for international business travel**  \n\n- **All international trips with a company laptop must follow the Data\u2011Security requirements** (POL\u2011007\u202f\u00a76.1).  \n- **Before you depart** you must:"
+    },
+    {
+      "id": "Q13",
+      "category": "tool_task",
+      "latency_s": 36.89,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_employee_profile",
+        "check_pto_balance",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001"
+      ],
+      "answer_head": "**Policy facts**\n\n- Your PTO balance shows **6.69 available days**\u202f[POL\u2011001 \u00a72.2].  \n- PTO requests must be entered in the HR portal and approved by your direct manager\u202f[POL\u2011001 \u00a73.2].  \n- For a reque"
+    },
+    {
+      "id": "Q14",
+      "category": "tool_task",
+      "latency_s": 13.4,
+      "tool_ok": false,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": false,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002"
+      ],
+      "answer_head": "**Policy guidance**\n\n- The Remote and Hybrid Work Policy sets an **annual limit of 20 business days** for working remotely from a country other than your country of employment\u202f\u2014\u202fsee\u202f[POL\u2011002 \u00a75.1]\u200b.\n-"
+    },
+    {
+      "id": "Q15",
+      "category": "tool_task",
+      "latency_s": 18.27,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_benefits_status",
+        "get_policy_section"
+      ],
+      "cited": [
+        "POL-004"
+      ],
+      "answer_head": "**Eligibility for health insurance**\n\n- According to your benefits record, you are **not eligible** for Company health\u2011insurance coverage.  \n- The policy states that **independent contractors, agency "
+    },
+    {
+      "id": "Q16",
+      "category": "tool_task",
+      "latency_s": 73.47,
+      "tool_ok": false,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": false,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents",
+        "get_policy_section"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-009"
+      ],
+      "answer_head": "You can use your PTO for a personal trip, provided the request follows the company\u2019s PTO rules:\n\n**Key policy points**\n\n- **Notice** \u2013 Submit the request in the HR portal at least\u202f3\u202fbusiness days befo"
+    },
+    {
+      "id": "Q17",
+      "category": "tool_task",
+      "latency_s": 38.25,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "check_pto_balance"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-012"
+      ],
+      "answer_head": "**What the policy says**\n\n- **Notice requirement** \u2013 For a request of\u202f3\u20139 consecutive days you must submit the request at least\u202f10\u202fbusiness days in advance\u202f[POL\u2011001 \u00a73.1].\n- **PTO balance check** \u2013 Yo"
+    },
+    {
+      "id": "Q18",
+      "category": "tool_task",
+      "latency_s": 18.18,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_benefits_status",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-004"
+      ],
+      "answer_head": "**401(k) match status**\n\n- Your 401(k) enrollment is complete, but the employer matching contribution has not started yet.  \n- The match begins **after 90\u202fdays of employment** (your start date was\u202f202"
+    },
+    {
+      "id": "Q19",
+      "category": "tool_task",
+      "latency_s": 18.57,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "draft_hr_email",
+        "draft_hr_email"
+      ],
+      "cited": [],
+      "answer_head": "Here\u2019s a draft you can review and send to your manager:\n\n---\n\n**To:** Marcus\u202fWebb (Manager)  \n**Subject:** PTO Request for September\u202f10\u201111  \n\nHi Marcus,\n\nI would like to request PTO for **September\u202f10"
+    },
+    {
+      "id": "Q20",
+      "category": "ambiguous",
+      "latency_s": 9.25,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": true,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-001",
+        "POL-012"
+      ],
+      "answer_head": "You can request paid time off (PTO) through the HR portal.\u202fThe policy sets minimum notice periods based on how many consecutive days you plan to be away:\n\n| Requested length | Minimum notice required "
+    },
+    {
+      "id": "Q21",
+      "category": "ambiguous",
+      "latency_s": 12.74,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": true,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [],
+      "cited": [],
+      "answer_head": "I\u2019m happy to help you check your PTO balance.\u202fTo provide an accurate answer, I\u2019ll need your employee ID so I can look up your personal record. Could you share that with me?"
+    },
+    {
+      "id": "Q22",
+      "category": "ambiguous",
+      "latency_s": 23.2,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": true,
+      "refuse_ok": null,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "search_policy_documents",
+        "search_policy_documents"
+      ],
+      "cited": [
+        "POL-002",
+        "POL-007"
+      ],
+      "answer_head": "You can work from a different location, but the Remote\u202f&\u202fHybrid Work Policy sets limits and approval steps that must be followed.\n\n**Domestic (within the same country)**\n- Up to **30\u202fcalendar days per"
+    },
+    {
+      "id": "Q23",
+      "category": "out_of_scope",
+      "latency_s": 0.58,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": true,
+      "safe": true,
+      "complete": true,
+      "used_tools": [],
+      "cited": [],
+      "answer_head": "I\u2019m sorry, but I can only provide information about LSJ, Inc.\u2019s own policies. For details on Google\u2019s PTO policy, please refer to Google\u2019s internal resources or contact their HR department. If you hav"
+    },
+    {
+      "id": "Q24",
+      "category": "out_of_scope",
+      "latency_s": 13.88,
+      "tool_ok": true,
+      "cite_ok": true,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": true,
+      "safe": true,
+      "complete": true,
+      "used_tools": [],
+      "cited": [],
+      "answer_head": "I\u2019m sorry, but I can\u2019t help with that. For weather information, please check a weather service or app."
+    },
+    {
+      "id": "Q25",
+      "category": "out_of_scope",
+      "latency_s": 64.01,
+      "tool_ok": true,
+      "cite_ok": false,
+      "grounded_ok": true,
+      "clarify_ok": null,
+      "refuse_ok": false,
+      "safe": true,
+      "complete": true,
+      "used_tools": [
+        "lookup_employee_profile",
+        "search_policy_documents"
+      ],
+      "cited": [],
+      "answer_head": "The language model is temporarily unavailable \u2014 most likely the free-tier rate limit under heavy use. Nothing is wrong with your request; please try again in a minute."
+    }
+  ]
+}

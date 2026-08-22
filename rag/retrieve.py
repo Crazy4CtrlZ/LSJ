@@ -39,7 +39,7 @@ def index_size() -> int:
 def search(query: str, k: int | None = None, doc_filter: str | None = None,
            category_filter: str | None = None) -> list[dict]:
     """Top-k semantic search. Returns contract-shaped results (may be empty — that's a valid answer)."""
-    k = max(1, min(int(k or config.RETRIEVAL_K), 10))
+    k = config.FORCE_RETRIEVAL_K or max(1, min(int(k or config.RETRIEVAL_K), 10))  # FORCE_… is the eval-ablation override
     where: dict | None = None
     clauses = []
     if doc_filter:
